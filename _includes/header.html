@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <!--[if lt IE 9]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="sv-SE"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="sv-SE" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=no, minimal-ui">
 
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} | Stiftelsen Markussens studiefond</title>
     <meta property="og:site_name" content="{{ site.name }}">
 
     <!-- icons & favicons -->
@@ -27,22 +27,24 @@
       <meta property="og:type" content="website">
     {% endif %}
 
-    {% if page.description %}
-      <meta property="og:description" content="{{ page.description }}">
-    {% endif %}
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:image" content="/images/image-default-social-media.jpg">
 
-    {% if page.date %}
-      <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-    {% endif %}
-
-    {% if page.image %}
-      <meta property="og:image" content="{{ site.url }}/{{ page.image }}">
-    {% endif %}
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:domain" content="markussens.se"/>
+    <meta name="twitter:image:src" content="/images/image-default-social-media.jpg"/>
 
     {% if page.url %}
       <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
       <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     {% endif %}
+
+    <!-- Search Engine Verification -->
+    <meta name="alexaVerifyID" content="0123456789" />
+    <meta name="msvalidate.01" content="0123456789" />
+    <meta name="google-site-verification" content="0123456789" />
+    <meta name="p:domain_verify" content="0123456789" />
+    <meta name="yandex-verification" content="0123456789" />
 
     <link rel="stylesheet" href="/stylesheets/styles.css">
     <script src="/javascripts/vendor/modernizr-2.8.3.min.js" defer="defer"></script>
